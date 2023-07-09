@@ -4,8 +4,10 @@ import {Server} from "socket.io"
 import __dirname from "./utils.js"
 import routerViews from "./router/views.router.js"
 
+const PORT = process.env.PORT || 8080
+
 const app = express();
-const httpServer = app.listen(8080, () => console.log("Listening ..."))
+const httpServer = app.listen(PORT, () => console.log("Listening ..."))
 const io = new Server(httpServer)
 
 
